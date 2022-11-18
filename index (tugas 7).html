@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase Bulan</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <marquee scrollamount="5" direction="right">
+        <img class="gif" width="75px" src="shooting_stars.gif">
+    </marquee>
+    <header>
+        <a href="#" class="logo">DMI</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="menu (tugas 7).html">Menu</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Fase Bulan</h2>
+        <a href="#sec" id="btn">START</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Apa itu fase bulan?</h2>
+        <p>Fase bulan merupakan perubahan bentuk bulan jika dilihat dari bumi. Perubahan ini bisa terjadi karena di luar angkasa, bulan selalu berputar mengelilingi bumi. Iya, hal ini dinamakan revolusi bulan. Kalau kamu tahu bahwa bumi selalu bergerak berputar mengelilingi matahari, demikian juga dengan bulan. Dia berputar mengelilingi bumi dari barat menuju timur. Sekali berevolusi terhadap bumi, dia membutuhkan waktu 29,5 hari.</p>
+        <a href="menu (tugas 7).html" id="btn2">NEXT</a>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let monophy = document.getElementById('monophy');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            monophy.style.top = value * 0.5 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
